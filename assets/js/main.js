@@ -30,9 +30,9 @@ function app() {
 
         let element_result = document.querySelector('#result')
 
-        if (!weight || isNaN(weight)) {
+        if (isNaN(weight)) {
             element_result.innerHTML = "Peso inválido"
-        } else if (!height || isNaN(height)) {
+        } else if (isNaN(height)) {
             element_result.innerHTML = "Altura inválida"
         } else {
             let imc_value = (imc(weight, height)).toFixed(2)
